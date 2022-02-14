@@ -30,8 +30,6 @@ function getColorValue() {
 		//HSL Value
 		hslColorValue = rgbToHsl(rgbColorValue.r, rgbColorValue.g, rgbColorValue.b);
 
-		console.log(hslColorValue);
-
 		// Show Values
 		hexV.textContent = hexColorValue;
 		rgbV.textContent = `rgb: ${rgbColorValue.r}, ${rgbColorValue.g},${rgbColorValue.b}`;
@@ -71,8 +69,6 @@ function convertion(color) {
 /*
  *CSS to RGB
  */
-let css = "rgb(192, 13, 1)";
-
 function cssToRGB(css) {
 	let r, g, b;
 	const rawTxt = css
@@ -84,7 +80,6 @@ function cssToRGB(css) {
 	b = parseInt(rawTxt[2].trim());
 	// console.log(`RGB Values are: r:${r}, g:${g}, b:${b}`);
 }
-cssToRGB(css);
 
 /*
  * HSL Convertion
@@ -126,6 +121,5 @@ function rgbToHsl(r, g, b) {
 
 	// console.log("hsl(%f,%f%,%f%)", h, s, l); // just for testing
 
-	console.log(Math.floor(l));
 	return { h: Math.floor(h), s: Math.floor(s), l: Math.floor(l) };
 }
